@@ -21,7 +21,7 @@
     "router"
   ],
   "author": "Rogério Munhoz <rogerio.j.munhoz@gmail.com>",
-  "license": "GPL-3.0",
+  "license": "GPL-3.0-only",
   "dependencies": {
     "@expresso/app": "^1.0.6",
     "@expresso/errors": "^1.2.0",
