@@ -1,8 +1,8 @@
 @expresso/cli
 ---
 
-This is a little yep (hopefully) useful tool to run [@expresso/app](https://npmjs.org/package/@expresso/app) apps with (optinally) zero config.
-The CLI receives a file path, wich shuold export a function returning a request handler, or an expresso app factory (se [below](#usage) for details); we then read said function, wrap it with [@expresso/app](https://npmjs.org/package/@expresso/app) tell it to use [@expresso/errors](https://npmjs.org/package/@expresso/errors) as error handler and, finally, run it with [@expresso/server](https://npmjs.org/package/@expresso/server).
+This is a little yet (hopefully) useful tool to run [@expresso/app](https://npmjs.org/package/@expresso/app) apps with (optinally) zero config.
+The CLI receives a file path, wich should export a function returning a request handler, or an expresso app factory (se [below](#usage) for details); we then read said function, wrap it with [@expresso/app](https://npmjs.org/package/@expresso/app) tell it to use [@expresso/errors](https://npmjs.org/package/@expresso/errors) as error handler and, finally, run it with [@expresso/server](https://npmjs.org/package/@expresso/server).
 
 # Usage
 
@@ -34,7 +34,7 @@ module.exports = {
 ```
 
 ## Multiple Routes
-For now, if you have multiple routes, want to use custom middleware or perform any other custom initialization logic, you should provide an app factory function; the CLI will load said function and feed to to @expresso/app to initalize your application.
+For now, if you have multiple routes, want to use custom middleware or perform any other custom initialization logic, you should provide an app factory function; the CLI will load said function and feed it to @expresso/app to initalize your application.
 
 > **Note: [@expresso/errors](https://npmjs.org/package/@expresso/errors) is automatically loaded for you, you don't need to load it in your factory function. An option to disable this behaviour can be added provided anyone need it (please open an issue if you do)**
 
@@ -66,15 +66,15 @@ expresso <fileName> [options]
 - `--single-route, -s`
   - Switches single route mode on
   - Default: `false`
-  - `--config, -c`
+- `--config, -c`
   - Path to the configuration file
   - Default: `null`
-  > Note: if you don't specify a config file, you should use the `name` option to provide an app name for @expresso/app
+  > Note: if you don't specify a config file, it's nice to use the `name` option to provide an app name for [@expresso/app](https://npmjs.org/package/@expresso/app)
 - `--path, -p`
   - Route path to be used, when using single route mode; ignored otherwise
   - Default: `'/'`
 - `--name, -n`
-  - Application name; used by @expresso/app for console display and debugging
+  - Application name; used by [@expresso/app](https://npmjs.org/package/@expresso/app) for console display and debugging
   - default: `'expresso-cli'`
   > Note: this will be overriden by the `name` property, if it's present on the config file.
 - `--method, -m`
