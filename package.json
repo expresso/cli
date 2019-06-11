@@ -30,5 +30,13 @@
   },
   "files": [
     "dist/**/*.js"
-  ]
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/expresso/cli.git"
+  },
+  "bugs": {
+    "url": "https://github.com/expresso/cli/issues"
+  },
+  "homepage": "https://github.com/expresso/cli#readme"
 }
