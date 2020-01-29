@@ -1,14 +1,14 @@
 @expresso/cli
 ---
 
-This is a little yet (hopefully) useful tool to run [@expresso/app](https://npmjs.org/package/@expresso/app) apps with (optinally) zero config.
-The CLI receives a file path, wich should export a function returning a request handler, or an expresso app factory (se [below](#usage) for details); we then read said function, wrap it with [@expresso/app](https://npmjs.org/package/@expresso/app) tell it to use [@expresso/errors](https://npmjs.org/package/@expresso/errors) as error handler and, finally, run it with [@expresso/server](https://npmjs.org/package/@expresso/server).
+This is a little yet (hopefully) useful tool to run [@expresso/app](https://npmjs.org/package/@expresso/app) apps with (optionally) zero config.
+The CLI receives a file path, wich should export a function returning a request handler, or an expresso app factory (see [below](#usage) for details); we then read said function, wrap it with [@expresso/app](https://npmjs.org/package/@expresso/app) tell it to use [@expresso/errors](https://npmjs.org/package/@expresso/errors) as error handler and, finally, run it with [@expresso/server](https://npmjs.org/package/@expresso/server).
 
 # Usage
 
 ## Single Route
-When you have a simngle route, you can export that route's factory and pass it to the `expresso` command.
-The factory will receive all config propeties as defined in the config file, plus all [config provided by @expresso/app](https://www.npmjs.com/package/@expresso/app#the-config-object)
+When you have a single route, you can export that route's factory and pass it to the `expresso` command.
+The factory will receive all config properties as defined in the config file, plus all [config provided by @expresso/app](https://www.npmjs.com/package/@expresso/app#the-config-object)
 
 ```shell
 expresso route.js -s -c config.js
